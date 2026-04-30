@@ -187,6 +187,8 @@ describe("ChatOpsManager security validation", () => {
       notifyMissingScopes: overrides.notifyMissingScopes ?? (async () => {}),
       downloadFiles: async () => [],
       discoverChannels: async () => null,
+      addApprovalRequestForm: async () => {},
+      updateApprovalRequest: async () => {},
     };
   }
 
@@ -854,6 +856,8 @@ describe("ChatOpsManager.handleIncomingMessage empty Slack mention", () => {
       notifyMissingScopes: async () => {},
       downloadFiles: async () => [],
       discoverChannels: async () => [],
+      addApprovalRequestForm: async () => {},
+      updateApprovalRequest: async () => {},
     };
 
     const manager = new ChatOpsManager();
@@ -921,6 +925,8 @@ describe("ChatOpsManager.handleIncomingMessage missing scope notification", () =
       notifyMissingScopes: overrides.notifyMissingScopes ?? (async () => {}),
       downloadFiles: async () => [],
       discoverChannels: async () => null,
+      addApprovalRequestForm: async () => {},
+      updateApprovalRequest: async () => {},
     };
   }
 
@@ -1381,6 +1387,8 @@ describe("ChatOpsManager attachment passthrough", () => {
       notifyMissingScopes: async () => {},
       downloadFiles: async () => [],
       discoverChannels: async () => null,
+      addApprovalRequestForm: async () => {},
+      updateApprovalRequest: async () => {},
     };
   }
 
